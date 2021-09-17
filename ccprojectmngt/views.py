@@ -1,16 +1,13 @@
 import pprint # Solo para test 
 
 import zipfile
-import base64
-from io import BytesIO, StringIO
+from io import BytesIO
 
 
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-
-from xhtml2pdf import pisa
 
 from document.models import Project
 from document.utils import AcctionDocument as ad
@@ -39,43 +36,46 @@ class HomeView(TemplateView):
 
     
     def post(self, request, *args, **kwargs):
+        # TODO imprime el objeto QueryDict, especificamente
+        # https://docs.djangoproject.com/en/3.2/ref/request-response/#querydict-objects
+        # el method `POST` por consola
         # print(request.POST)
 
-        # Tomar un valor en especifico del QueryDict.
+        #TODO Tomar un valor en especifico del QueryDict.
         # print(request.POST['check1'])
         # output -> 
 
-        # Otra forma de tomar un valor en especifico del QueryDict.
+        #TODO Otra forma de tomar un valor en especifico del QueryDict.
         # print(request.POST.get('check1'))
         # output -> 1
 
-        # Trae la `lista` completa de valores de un valor en especifico del QueryDict.
+        #TODO Trae la `lista` completa de valores de un valor en especifico del QueryDict.
         # print(request.POST.getlist('check1'))
         # output -> ['1']
 
         check_id_list = list()
-        pdf_list_buffer = list()
+        text_file_dict = dict()
 
         # # Se toman los id, proveniente
-        # # de los input que frueron marcados
+        # # de los inputs que fueron marcados
         # # con check y se almacenan en una lista.
-        # https://docs.djangoproject.com/en/3.2/ref/request-response/#querydict-objects
-
-        for key, value in request.POST.items():  # [(key, value), (key, value)....(keyN, ValueN)]
+        for key, value in request.POST.items():  # request.POST.items() => [(key, value), (key, value)....(keyN, ValueN)]
             if key != 'csrfmiddlewaretoken':
                 for pk in value:
                     check_id_list.append(pk)
         
-        # TODO
+        # TODO test: verificar contenido de check_id_list por consola
         # print(check_id_list)
+        # output e.g -> ['1', '2',....,[n]]
 
         # # Se hace un query y se toman
         # # los registros, dependiendo
         # # del id en check_id_list
         projects_selected = Project.objects.filter(pk__in=check_id_list)
         
-        # TODO
+        # TODO test: verificar contenido de projects_selected por consola
         # print(projects_selected)
+        # output e.g -> <QuerySet [<Objeto Model 1>, <Objeto Model 2>,.....<Objeto Model N>]
 
         # # Se genera la lista de HTML's
         html_generados = ad.generarHTML(projects_selected)
@@ -83,7 +83,7 @@ class HomeView(TemplateView):
         try:
             # Se crea un Response Object del tipo zip
             
-            # ver lista de content_type por documents
+            # ver lista de content_type(MIME's) por documents
             # https://developer.mozilla.org/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
             response = HttpResponse(content_type="application/zip")
             response['Content-Disposition'] = 'attachment; filename=test.zip'
@@ -94,25 +94,23 @@ class HomeView(TemplateView):
 
             # Se itera a travez de la lista
             # de html's generados.
-            for html in html_generados:
+            for solicitante, html_code in html_generados.items():
                 # Se crea un buffer para mantener los archivos
                 # en memoria.
                 buffer = BytesIO()
+                buffer.write(html_code.encode('UTF-8'))
+                buffer.seek(0)
 
-                # Se utiliza la libreria -> xhtml2pdf
-                # para transformar un html --a--> pdf
-                # https://xhtml2pdf.readthedocs.io/en/latest/
-                pisa_status = pisa.CreatePDF(
-                    html, dest=buffer
-                )
-                if pisa_status.err:
-                    return HttpResponse("Error...")
-
-                pdf_list_buffer.append(buffer)
+                text_file_dict[solicitante] = buffer
             
+            # Se crea un documento Zip, apartir de la libreria de Python zipfile.
+            # Luego se recorre el diccionario de documentos .txt, generados anteriormente
+            # Se toma el nombre del solicitante, para construir el nombre del documento,
+            # y se ingresa el documento dentro del Zip.
             with zipfile.ZipFile(zip_buffer, "a", zipfile.ZIP_DEFLATED, False) as zip_file:
-                for pdf_buffer in pdf_list_buffer:
-                    zip_file.writestr("testy_ficher.pdf", pdf_buffer.getvalue())
+                for solicitante, txt_file_buffer in text_file_dict.items():
+                    file_name = "{}.txt".format(solicitante)
+                    zip_file.writestr(file_name, txt_file_buffer.getvalue())
             
             response.write(zip_buffer.getvalue())
             return response
