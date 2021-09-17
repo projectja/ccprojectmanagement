@@ -15,6 +15,8 @@ from xhtml2pdf import pisa
 from document.models import Project
 from document.utils import AcctionDocument as ad
 
+
+
 class HomeView(TemplateView):
     template_name = "index.html"
 
@@ -37,23 +39,45 @@ class HomeView(TemplateView):
 
     
     def post(self, request, *args, **kwargs):
+        # print(request.POST)
+
+        # Tomar un valor en especifico del QueryDict.
+        # print(request.POST['check1'])
+        # output -> 
+
+        # Otra forma de tomar un valor en especifico del QueryDict.
+        # print(request.POST.get('check1'))
+        # output -> 1
+
+        # Trae la `lista` completa de valores de un valor en especifico del QueryDict.
+        # print(request.POST.getlist('check1'))
+        # output -> ['1']
+
         check_id_list = list()
         pdf_list_buffer = list()
 
-        # Se toman los id, proveniente
-        # de los input que frueron marcados
-        # con check y se almacenan en una lista.
-        for key, value in request.POST.items():
+        # # Se toman los id, proveniente
+        # # de los input que frueron marcados
+        # # con check y se almacenan en una lista.
+        # https://docs.djangoproject.com/en/3.2/ref/request-response/#querydict-objects
+
+        for key, value in request.POST.items():  # [(key, value), (key, value)....(keyN, ValueN)]
             if key != 'csrfmiddlewaretoken':
                 for pk in value:
                     check_id_list.append(pk)
+        
+        # TODO
+        # print(check_id_list)
 
-        # Se hace un query y se toman
-        # los registros, dependiendo
-        # del id en check_id_list
+        # # Se hace un query y se toman
+        # # los registros, dependiendo
+        # # del id en check_id_list
         projects_selected = Project.objects.filter(pk__in=check_id_list)
+        
+        # TODO
+        # print(projects_selected)
 
-        # Se genera la lista de HTML's
+        # # Se genera la lista de HTML's
         html_generados = ad.generarHTML(projects_selected)
 
         try:
