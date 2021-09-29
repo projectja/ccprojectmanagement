@@ -3,8 +3,12 @@ from django.template.loader import render_to_string
 class AcctionDocument:
 
     def generarHTML(projects_selected):
+        # Devuelve un diccionario con
+        # el nombre del solicitante como key
+        # y un SafeString del codigo HTML del template
+        # como value.
+        
         dict_doc_html = dict()
-        # print(data.documento_solicitante, data.documento_representante)
         
         # Se recorre el queryset de los registros en `projects`
         # se crea un contexto por cada registro, y se genera 

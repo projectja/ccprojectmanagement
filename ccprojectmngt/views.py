@@ -3,7 +3,6 @@ import pprint # Solo para test
 import zipfile
 from io import BytesIO
 
-
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
@@ -34,7 +33,7 @@ class HomeView(TemplateView):
         # return render(TemplateView, 'index.html', context) esto no funciona , tengo que usar solo return context
         return context
 
-    
+
     def post(self, request, *args, **kwargs):
         # TODO imprime el objeto QueryDict, especificamente
         # https://docs.djangoproject.com/en/3.2/ref/request-response/#querydict-objects
@@ -93,20 +92,64 @@ class HomeView(TemplateView):
             zip_buffer = BytesIO()
 
             # Se itera a travez de la lista
-            # de html's generados.
+            # de html's generados y crear un documento
+            # con extension .txt que contendrá el codigo HTML.
             for solicitante, html_code in html_generados.items():
                 # Se crea un buffer para mantener los archivos
                 # en memoria.
+                buffer = BytesIO()
+
+                # El codigo HTML, viene como objeto SafeString.
+                # el metodo encode('UTF-8') permitirá darle el formato
+                # adecuado para poder ser volcado en el buffer.
+                buffer.write(html_code.encode('UTF-8')) 
+                buffer.seek(0)
+
+                text_file_dict[solicitante] = buffer
+            
+            # Se crea un documento Zip, apartir de la libreria de Python zipfile.
+            with zipfile.ZipFile(zip_buffer, "a", zipfile.ZIP_DEFLATED, False) as zip_file:
+
+                # Se recorre el diccionario de documentos .txt, generados anteriormente
+                # Se toma el nombre del solicitante, para construir el nombre del documento,
+                # y se ingresa el documento dentro del Zip.
+                for solicitante, txt_file_buffer in text_file_dict.items():
+                    file_name = "{}.txt".format(solicitante)
+                    zip_file.writestr(file_name, txt_file_buffer.getvalue())
+            
+            response.write(zip_buffer.getvalue())
+            return response
+        except Exception as e:
+            print(e)
+
+
+
+def home_view(request):
+
+    if request.method == 'POST':
+        check_id_list = list()
+        text_file_dict = dict()
+
+        for key, value in request.POST.items():
+            if key != 'csrfmiddlewaretoken':
+                for pk in value:
+                    check_id_list.append(pk)
+        
+        projects_selected = Project.objects.filter(pk__in=check_id_list)
+        html_generados = ad.generarHTML(projects_selected)
+        try:
+            response = HttpResponse(content_type="application/zip")
+            response['Content-Disposition'] = 'attachment; filename=test.zip'
+
+            zip_buffer = BytesIO()
+
+            for solicitante, html_code in html_generados.items():
                 buffer = BytesIO()
                 buffer.write(html_code.encode('UTF-8'))
                 buffer.seek(0)
 
                 text_file_dict[solicitante] = buffer
             
-            # Se crea un documento Zip, apartir de la libreria de Python zipfile.
-            # Luego se recorre el diccionario de documentos .txt, generados anteriormente
-            # Se toma el nombre del solicitante, para construir el nombre del documento,
-            # y se ingresa el documento dentro del Zip.
             with zipfile.ZipFile(zip_buffer, "a", zipfile.ZIP_DEFLATED, False) as zip_file:
                 for solicitante, txt_file_buffer in text_file_dict.items():
                     file_name = "{}.txt".format(solicitante)
@@ -116,3 +159,10 @@ class HomeView(TemplateView):
             return response
         except Exception as e:
             print(e)
+    else:
+        projects = Project.objects.all()
+
+        ctx = {
+            'projects': projects
+        }
+        return render(request, 'index.html', ctx)
