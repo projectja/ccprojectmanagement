@@ -1,0 +1,213 @@
+
+Haciendo ping a 8.8.8.8 con 32 bytes de datos:
+Respuesta desde 8.8.8.8: bytes=32 tiempo=115ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=85ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=72ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=126ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=389ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=73ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=93ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=128ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=58ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=62ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=40ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=34ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=114ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=161ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=68ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=18ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=22ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=343ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=599ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=590ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=633ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=2929ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=3321ms TTL=115
+Tiempo de espera agotado para esta solicitud.
+Respuesta desde 8.8.8.8: bytes=32 tiempo=3180ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=971ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1964ms TTL=115
+Tiempo de espera agotado para esta solicitud.
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1785ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1268ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=925ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=335ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=703ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1347ms TTL=115
+Tiempo de espera agotado para esta solicitud.
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1541ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1794ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1299ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=379ms TTL=115
+Tiempo de espera agotado para esta solicitud.
+Respuesta desde 8.8.8.8: bytes=32 tiempo=608ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=186ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1965ms TTL=115
+Tiempo de espera agotado para esta solicitud.
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1544ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1379ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=742ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=832ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=815ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=717ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=500ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=668ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=735ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=471ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=101ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=60ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=905ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1772ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=2328ms TTL=115
+Tiempo de espera agotado para esta solicitud.
+Respuesta desde 8.8.8.8: bytes=32 tiempo=61ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=35ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=185ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=36ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=54ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=32ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=129ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=111ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=73ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=99ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=43ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=38ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=56ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=26ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=132ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=38ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=63ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=37ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=39ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=51ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=44ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=95ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=89ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=57ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=93ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=53ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=105ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=29ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=85ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=52ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=21ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=53ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=92ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=24ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=31ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=27ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=36ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=21ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=102ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=86ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=84ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=200ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=40ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=78ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=73ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=21ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=33ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=23ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=94ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=28ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=131ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=77ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=71ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=37ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=61ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=24ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=53ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=28ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=196ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=154ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=34ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=96ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=57ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=110ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=222ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=255ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=263ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=234ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=874ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=98ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=224ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=260ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=17ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=113ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=141ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=387ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=230ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=125ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=544ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=173ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=50ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=58ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=80ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=37ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=94ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=108ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=334ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=769ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=450ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=536ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=908ms TTL=115
+Tiempo de espera agotado para esta solicitud.
+Respuesta desde 8.8.8.8: bytes=32 tiempo=51ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=99ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=48ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=42ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=152ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=26ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=60ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=368ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=64ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=101ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=149ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=104ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=44ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=83ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=148ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=27ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=133ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=24ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=160ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=19ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=108ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=28ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=223ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=193ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=241ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=157ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=118ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=67ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=256ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=48ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=38ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=130ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=287ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=292ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1477ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=766ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=126ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=44ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=46ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=54ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=22ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=158ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=96ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1815ms TTL=115
+Tiempo de espera agotado para esta solicitud.
+Tiempo de espera agotado para esta solicitud.
+Tiempo de espera agotado para esta solicitud.
+Tiempo de espera agotado para esta solicitud.
+Tiempo de espera agotado para esta solicitud.
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1361ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=1807ms TTL=115
+Respuesta desde 8.8.8.8: bytes=32 tiempo=3233ms TTL=115
+
+Estad¡sticas de ping para 8.8.8.8:
+    Paquetes: enviados = 204, recibidos = 192, perdidos = 12
+    (5% perdidos),
+Tiempos aproximados de ida y vuelta en milisegundos:
+    M¡nimo = 17ms, M ximo = 3321ms, Media = 369ms
+Control-C
