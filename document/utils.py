@@ -20,6 +20,6 @@ class AcctionDocument:
             # Se utiliza render_to_string para tomar el codigo html
             # y convertirlo en un objeto SafeString
             document_html = render_to_string('Plantilla Base/document.html', context)
-            dict_doc_html[p.solicitante] = document_html
+            dict_doc_html[p.nombre_solicitante] = document_html
 
         return dict_doc_html
