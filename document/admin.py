@@ -1,11 +1,15 @@
 from django.contrib import admin
-from import_export import resources
+
+from import_export import resources, fields, widgets
 from import_export.admin import ImportExportModelAdmin
 
 from .models import Project
 
 
 class ProjectResource(resources.ModelResource):
+   fecha_diagnostico = fields.Field(attribute="fecha_diagnostico", column_name="fecha_diagnostico", widget=widgets.DateWidget('%d/%m/%Y'))
+
+
    class Meta:
       model = Project
       fields = ['id','fecha_documento', 'programa',  'n_sorte',  'consultora', 'id_solicitud', 'documento_solicitante','nombre_solicitante', 'provincia', 'poblacion','cp','email','direccion', 'telefono_solicitante', 'documento_representante','nombre_representante',
