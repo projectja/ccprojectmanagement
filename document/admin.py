@@ -1,5 +1,8 @@
 from django.contrib import admin
 
+# Se importa fields & windets, para
+# dar establecer a que campo del modelo
+# se le dará formato.
 from import_export import resources, fields, widgets
 from import_export.admin import ImportExportModelAdmin
 
@@ -7,7 +10,14 @@ from .models import Project
 
 
 class ProjectResource(resources.ModelResource):
-   fecha_diagnostico = fields.Field(attribute="fecha_diagnostico", column_name="fecha_diagnostico", widget=widgets.DateWidget('%d/%m/%Y'))
+   # attribute -> el campo dentro del model.
+   # column_name -> la columna dentro del formato (.xls o .xlxs)
+   # widget -> representa el objeto que dará formato al campo dentro del model.
+   # https://django-import-export.readthedocs.io/en/latest/api_fields.html#fields -> SOBRE  Field
+   # https://django-import-export.readthedocs.io/en/latest/api_widgets.html#import_export.widgets.DateWidget -> SOBRE Widgets
+
+   # TODO aqui la sintaxis para dar formato a un campo.
+   # fecha_diagnostico = fields.Field(attribute="fecha_diagnostico", column_name="fecha_diagnostico", widget=widgets.DateWidget('%d/%m/%Y'))
 
 
    class Meta:

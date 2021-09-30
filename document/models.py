@@ -40,7 +40,7 @@ class Project(models.Model):
     dni = models.CharField(max_length=50, null=True, blank=True)
     tratamiento_representante = models.CharField(max_length=50, null=True, blank=True)
     fecha_doc = models.CharField(max_length=50, null=True, blank=True)
-    fecha_diagnostico = models.DateField(null=True, blank=True)
+    fecha_diagnostico = models.CharField(max_length=50, null=True, blank=True)
     fecha_recepcion_presupuesto = models.CharField(max_length=50, null=True, blank=True)
     fecha_envio_anexo_19 = models.CharField(max_length=50, null=True, blank=True)
     envio_ppi = models.CharField(max_length=50, null=True, blank=True)
