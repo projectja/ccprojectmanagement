@@ -79,7 +79,8 @@ class HomeView(TemplateView):
 
         # # Se genera la lista de HTML's
         html_generados = ad.generarHTML(projects_selected)
-
+        
+  
         try:
             # Se crea un Response Object del tipo zip
             

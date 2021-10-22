@@ -8,20 +8,26 @@
    </style>
 </head>
 <body>
-
    <div class="container">
       <div class="row">
          <div class="col-6">
-
-
+            <ul>
+               <li>{{ project.justificacion_diagnostico }}</li>
+            </ul>
+            <ul>
+               <li>{{ project.proyectos }}</li>
+            </ul>
+            <ul>
+               <li>{{ project.bitacora }}</li>
+            </ul>
 
             <ul>
                <li>SOLICITUD
                <ul>
                   <li>Registro Registro SEDE:
                   <ul>
-                     <li>Id:&nbsp;SL000000103179</li>
-                     <li>Fecha y hora:&nbsp;18/06/2021 11:05:46</li>
+                     <li>Id:&nbsp;{{ project.id_solicitud  }}</li>
+                     <li>Fecha y hora:&nbsp;{{ project.fecha_y_hora_solicitud }}</li>
                   </ul>
                   </li>
                </ul>
@@ -30,72 +36,55 @@
             
             <hr />
             <ul>
-               <li>Solicitud debidamente cumplimentada y firmada.<span style="color:#16a085"> <strong>OK</strong></span></li>
-               <li>Declaraci&oacute;n Responsable debidamente cumplimentada y firmada.<span style="color:#16a085"><strong>dec_responsable_ok</strong></span></li>
-               <li>Domicilio Fiscal y/o Social en la demarcaci&oacute;n de la C&aacute;mara&nbsp;<span style="color:#16a085"><strong>OK</strong></span></li>
-               <li>DNI.&nbsp;<span style="color:#16a085"><strong>dni_ok</strong></span></li>
-               <li>Poderes o escrituras del firmante.&nbsp;<span style="color:#16a085"><strong>escrituras_ok</strong></span></li>
-               <li>CIF.&nbsp;<span style="color:#16a085"><strong>cif_ok</strong></span></li>
-               <li>Condiciones de participaci&oacute;n.<span style="color:#16a085"><strong>OK</strong></span></li>
+               <li>Solicitud debidamente cumplimentada y firmada. <span style="color:#16a085"><strong>{{ project.solicitud_cumplimentada_ok }}</strong></span></li>
+               <li>Declaraci&oacute;n Responsable debidamente cumplimentada y firmada.&nbsp;<span style="color:#16a085"><strong>{{ project.dec_responsable_ok  }}</strong></span></li>                                                       
+               <li>Domicilio Fiscal y/o Social en la demarcaci&oacute;n de la C&aacute;mara.&nbsp;<span style="color:#16a085"><strong>{{ project.domicilio_en_demarcacion_ok }}</strong></span></li>
+               <li>DNI.&nbsp;<span style="color:#16a085"><strong>{{ project.dni_ok  }}</strong></span></li>               
+               <li>Escrituras.&nbsp;<span style="color:#16a085"><strong>{{ project.escrituras_ok  }}</strong></span></li>                          
+               <li>IAE:&nbsp; &nbsp;<span style="color:#27ae60"><strong>{{ project.iae  }}&nbsp;</strong></span></li>
+               <li>CIF.&nbsp;<span style="color:#16a085"><strong>{{ project.cif_ok  }}</strong></span></li>
+               <li>Condiciones de participaci&oacute;n.<span style="color:#16a085"><strong>{{ project.condiciones_participacion }}</strong></span></li>               
+	            <li>SS:&nbsp; &nbsp; <span style="color:#27ae60"><strong>{{ project.ss_ok  }}&nbsp;</strong></span></li>
+	            <li>AEAT:&nbsp; <span style="color:#27ae60"><strong>{{ project.aeat_ok  }}&nbsp;</strong></span></li>
+
             </ul>
             
             <hr />
             <ul>
-               <li>Informe de Valoraci&oacute;n de Solicitudes. <span style="color:#16a085"><strong>02/09/2021</strong></span></li>
-               <li>Resoluci&oacute;n. <span style="color:#16a085"><strong>02/09/2021</strong></span></li>
-               <li>N&ordm; Expediente.&nbsp;<span style="color:#16a085"><strong>SOS_AN_HU_008</strong></span></li>
-               <li>Informaci&oacute;n Adicional del Beneficiario.&nbsp;<span style="color:#16a085"><strong>OK</strong></span></li>
+               <li>Informe de Valoraci&oacute;n de Solicitudes. <span style="color:#16a085"><strong>{{ project.fecha_informe_valoracion  }}</strong></span></li>
+               <li>Resoluci&oacute;n. <span style="color:#16a085"><strong>{{ project.fecha_resolucion  }} </strong></span></li>
+               <li>N&ordm; Expediente.&nbsp;<span style="color:#16a085"><strong>{{ project.num_expediente  }}</strong></span></li>
+               <li>Informaci&oacute;n Adicional del Beneficiario.&nbsp;<span style="color:#16a085"><strong>{{ project.informacion_adicional_beneficiario_anexo_16  }}</strong></span></li>
             </ul>
             
             <hr />
             <ul>
                <li>FASE I.
                <ul>
-                  <li>Convenio DECA empresa. <span style="color:#16a085"><strong>03/09/2021</strong></span></li>
-                  <li>Diagnostico.&nbsp;</li>
-                  <li>&nbsp;Registro Prestaci&oacute;n Servicio Fase I.&nbsp;</li>
+                  <li>Convenio DECA empresa. <span style="color:#16a085"><strong>{{ project.fecha_convenido_deca_anexo_10 }}</strong></span></li>
+                  <li>Diagnostico.&nbsp;<span style="color:#16a085"><strong>{{ project.fecha_diagnostico }}</strong></span></li>
+                  <li>&nbsp;Registro Prestaci&oacute;n Servicio Fase I.&nbsp;<span style="color:#16a085"><strong>{{ project.fecha_registro_participacion_fase_i_anexo_18 }} </strong></span></li>
                </ul>
                FASE II
             
                <ul>
-                  <li>Enviado email Publicidad UE</li>
-                  <li>Participaci&oacute;n en Fase II&nbsp;</li>
-                  <li>Presupuestos (Fecga de recepci&oacute;n).&nbsp;</li>
-                  <li>PPI.</li>
-                  <li>Registro Prestaci&oacute;n Servicio y Seguimiento - Fase II.&nbsp;</li>
-                  <li>Memoria Ejecuci&oacute;n Proyecto y Cuestionario.&nbsp;</li>
-                  <li>Anexo 27. Formulario CCC - EMPRESAS.</li>
-                  <li>Facturas.</li>
-                  <li>Orden de transferencia.</li>
-                  <li>Extracto bancario.</li>
-                  <li>Evidencias del gasto.&nbsp;</li>
-                  <li>Obligaciones publicidad UE.&nbsp;</li>
+                  <li>Enviado email Publicidad UE.&nbsp;<span style="color:#16a085"><strong>{{ project.enviado_email_publicidad_ue }} </strong></span></li>
+                  <li>Participaci&oacute;n en Fase II&nbsp;<span style="color:#16a085"><strong>{{ project.fecha_registro_participacion_fase_i_anexo_18 }}</strong></span></li>
+                  <li>Presupuestos (Fecga de recepci&oacute;n).&nbsp;<span style="color:#16a085"><strong>{{ project.fecha_recepcion_presupuesto  }}</strong></span></li>
+                  <li>PPI.&nbsp;<span style="color:#16a085"><strong>{{ project.envio_ppi }} </strong></span></li>
+                  <li>Anexo 19. Registro Prestaci&oacute;n Servicio y Seguimiento - Fase II.&nbsp;<span style="color:#16a085"><strong>    {{ project.fecha_registro_participacion_en_fase_ii_anexo_19 }}</strong></span></li>
+                  <li>Anexo 20. Memoria Ejecuci&oacute;n Proyecto y Cuestionario.&nbsp;<span style="color:#16a085"><strong>{{ project.memoria_proyecto_y_cuestionario  }} </strong></span></li>
+                  <li>Anexo 27. Formulario CCC - EMPRESAS..&nbsp;<span style="color:#16a085"><strong>{{ project.formulario_ccc_empresas }}  </strong></span></li>
+                  <li>Facturas.&nbsp;<span style="color:#16a085"><strong>{{ project.facturas  }}</strong></span></li>
+                  <li>Orden de transferencia.&nbsp;<span style="color:#16a085"><strong>{{ project.orden_de_transferencia  }} </strong></span></li>
+                  <li>Extracto bancario.&nbsp;<span style="color:#16a085"><strong>{{ project.extracto_bancario }} </strong></span></li>
+                  <li>Evidencias del gasto.&nbsp;<span style="color:#16a085"><strong>{{ project.evidencias_del_gasto  }}</strong></span></li>
+                  <li>Obligaciones publicidad UE.&nbsp;<span style="color:#16a085"><strong>{{ project.obligaciones_publicidad_ue  }}</strong></span></li>
                </ul>
                </li>
-            </ul>
+            </ul>          
+
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <p>{{ project.programa }}</p>
-            <p>{{ project.nombre_solicitante }}</p>
-            <p>{{ project.documento_solicitante }}</p>
-            <p>{{ project.fecha_diagnostico }}</p>
-            <p>{{ project.representante }}</p>
-            <p>{{ project.documento_representante }}</p>
-            <p>{{ project.correo_representante }}</p>
          </div>
       </div>
    </div>
