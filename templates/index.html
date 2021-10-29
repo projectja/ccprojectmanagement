@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
        <div class="row">
@@ -30,16 +31,26 @@
                 {% endfor %}
                 </tbody>
             </table>
-            <div class="col-12">
+            
+            <div class="col-12">                
                 <button id="btnDeca" type="submit" class="btn btn-primary">Deca</button>
             </div>
+            
         </form>
       </div>
 
 
 {% endblock content %}
 
+
+{% block extra_javascript %}
+  <script src="{% static 'js/empresa/list.js' %}"></script>
+{% endblock extra_javascript %}
+
 {# % block script % #}
+
+
+
     <!-- <script>
         function sleep(milliseconds) {
             const date = Date.now();
