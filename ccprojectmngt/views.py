@@ -25,6 +25,7 @@ from .forms import Filter
 class HomeView(View): 
     # DUDA : ANTES EN HOMEVIEW APARECÍA TEMPLATEVIEW (CUANDO NO SE UTILIZABA AJAX) , AHORA APARECE VIEW POR QUE?
     template_name = "index.html"
+  
 
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):
@@ -35,10 +36,12 @@ class HomeView(View):
         context = {
             'form': form
         }
+        print("contesto",context)
         return render(self.request, self.template_name, context)
 
     def post(self, *args , **kwargs):
       data = dict()
+    
       try:
 
          data = list()
@@ -58,20 +61,27 @@ class HomeView(View):
             filter_fields['nombre_solicitante__startswith'] = nombre_solicitante
          
          if filter_fields == {}:
-            for i in Project.objects.all():
+             for i in Project.objects.all():
+     
+               #print(" impirmiendo i ", i)
+               #print(i.to_JSON())
                data.append(i.to_JSON())
+               
          else:
             for i in Project.objects.filter(**filter_fields):
-               data.append(i.to_JSON())
-
+               data.append(i.to_JSON())       
+            
+      
       except Exception as e:
-         data['error'] = str(e)
+          print("error")
+         #data['error'] = str(e)    
+      print("data ", data)  
       return JsonResponse(data, safe=False)
 
+       
 
 
-
-
+""" 
 
 
     def get_context_data(self, **kwargs):
@@ -175,3 +185,4 @@ class HomeView(View):
             return response
         except Exception as e:
             print(e)
+ """

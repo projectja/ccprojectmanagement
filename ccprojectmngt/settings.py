@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     # Librerias
     'import_export',
 
+    # Apps
+    'document.apps.DocumentConfig',
+
 ]
 
 

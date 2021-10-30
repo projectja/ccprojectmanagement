@@ -14,20 +14,20 @@ ALPHABETIC_CHOICES = (
 
 class Filter(forms.Form):
 
-   alpha = forms.ChoiceField(
+   programa = forms.ChoiceField(
       choices=ALPHABETIC_CHOICES,
       widget=forms.Select(
          attrs={
             'class': 'form-control'}))
    
-   poblacion = forms.ModelChoiceField(
-      queryset=Project.objects.all(),
+   consultora = forms.ModelChoiceField(
+      queryset=Project.objects.values('programa','consultora','nombre_solicitante'),
       widget=forms.Select(
          attrs={
             'class': 'form-control'}))
    
-   sector = forms.ModelChoiceField(
-      queryset=Project.objects.all(),
+   nombre_solicitante = forms.ModelChoiceField(
+      queryset=Project.objects.values('programa','consultora','nombre_solicitante'),
       widget=forms.Select(
          attrs={
             'class': 'form-control'}))

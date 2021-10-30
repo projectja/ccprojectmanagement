@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import model_to_dict
 
 # Create your models here.
 
@@ -113,7 +114,6 @@ class Project(models.Model):
     
     
     
-    
 
 
     
@@ -127,3 +127,16 @@ class Project(models.Model):
     # este soliciting aparece en la parte de administracion como solicitante
     def __str__(self):
         return self.nombre_solicitante
+#
+
+
+   
+    def to_JSON(self):
+        item = model_to_dict(self)
+        #print (" MI ITEM .....................", item)
+        #item['nombre_solicitante'] = self.nombre_solicitante.to_JSON()
+        #item['consultora'] = self.consultora.to_JSON()
+        #item['programa'] = self.programa.to_JSON()
+       
+
+        return item

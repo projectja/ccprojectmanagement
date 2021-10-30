@@ -14,27 +14,24 @@ function get_datatable (data) {
           dataSrc: ""
       },
       columns: [
-          {"data": "nombre"},
-          {"data": "poblacion.nombre"},
-          {"data": "partidas"},
+          {"data": "programa"},
+          {"data": "consultora"},
+          {"data": "nombre_solicitante"},
       ]
   });
-
 }
 
 $("#btnFilter").click(function (){
-   var poblacion = $("#id_poblacion");
-   var sector = $("#id_sector");
-   var alpha = $("#id_alpha");
+   var programa = $("#programa");
+   var nombre_solicitante = $("#nombre_solicitante");
+   var consultora = $("#consultora");
 
    data  = {
-      'poblacion': poblacion.val(),
-      'sector': sector.val(),
-      'alpha': alpha.val(),
+      'programa': programa.val(),
+      'nombre_solicitante': nombre_solicitante.val(),
+      'consultora': consultora.val(),
    }
-
    get_datatable(data);
-
 });
 
 
@@ -77,7 +74,7 @@ function create_card_info(data){
 
    title = document.createElement("h3")
    title.classList.add("text-primary")
-   title.innerHTML = data.nombre
+   title.innerHTML = data.programa
 
    p = document.createElement("p")
    p.classList.add("text-muted")
@@ -94,7 +91,7 @@ function create_card_info(data){
    
    b1 = document.createElement("b")
    b1.classList.add("d-block")
-   b1.innerHTML = data.poblacion.nombre
+   b1.innerHTML = data.consultora
 
    p3 = document.createElement("p")
    p3.classList.add("d-block")
@@ -102,7 +99,7 @@ function create_card_info(data){
 
    b2 = document.createElement("b")
    b2.classList.add("d-block")
-   b2.innerHTML = data.partidas
+   b2.innerHTML = data.nombre_solicitante
 
    h5 = document.createElement("h5")
    h5.classList.add("mt-5", "text-muted")
