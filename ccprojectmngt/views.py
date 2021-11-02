@@ -61,8 +61,8 @@ class HomeView(TemplateView):
         # # con check y se almacenan en una lista.
         for key, value in request.POST.items():  # request.POST.items() => [(key, value), (key, value)....(keyN, ValueN)]
             if key != 'csrfmiddlewaretoken':
-                for pk in value:
-                    check_id_list.append(pk)
+               # for pk in value:
+                    check_id_list.append(value)
         
         # TODO test: verificar contenido de check_id_list por consola
         # print(check_id_list)

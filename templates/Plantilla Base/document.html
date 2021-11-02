@@ -11,15 +11,15 @@
    <div class="container">
       <div class="row">
          <div class="col-6">
-            <ul>
-               <li>{{ project.justificacion_diagnostico }}</li>
-            </ul>
-            <ul>
-               <li>{{ project.proyectos }}</li>
-            </ul>
-            <ul>
-               <li>{{ project.bitacora }}</li>
-            </ul>
+            
+               Horas justificadas: {{ project.justificacion_diagnostico }}
+            
+            
+               {{ project.proyectos }}
+            
+            
+               {{ project.bitacora }}
+            
 
             <ul>
                <li>SOLICITUD
@@ -68,12 +68,12 @@
                FASE II
             
                <ul>
-                  <li>Enviado email Publicidad UE.&nbsp;<span style="color:#16a085"><strong>{{ project.enviado_email_publicidad_ue }} </strong></span></li>
-                  <li>Participaci&oacute;n en Fase II&nbsp;<span style="color:#16a085"><strong>{{ project.fecha_registro_participacion_fase_i_anexo_18 }}</strong></span></li>
                   <li>Presupuestos (Fecga de recepci&oacute;n).&nbsp;<span style="color:#16a085"><strong>{{ project.fecha_recepcion_presupuesto  }}</strong></span></li>
+                  <li>Enviado email Publicidad UE.&nbsp;<span style="color:#16a085"><strong>{{ project.enviado_email_publicidad_ue }} </strong></span></li>
+                  <li>Anexo 19. Participaci&oacute;n en Fase II&nbsp;<span style="color:#16a085"><strong>{{ project.fecha_registro_participacion_fase_i_anexo_18 }}</strong></span></li>
                   <li>PPI.&nbsp;<span style="color:#16a085"><strong>{{ project.envio_ppi }} </strong></span></li>
-                  <li>Anexo 19. Registro Prestaci&oacute;n Servicio y Seguimiento - Fase II.&nbsp;<span style="color:#16a085"><strong>    {{ project.fecha_registro_participacion_en_fase_ii_anexo_19 }}</strong></span></li>
-                  <li>Anexo 20. Memoria Ejecuci&oacute;n Proyecto y Cuestionario.&nbsp;<span style="color:#16a085"><strong>{{ project.memoria_proyecto_y_cuestionario  }} </strong></span></li>
+                  <li>Anexo 20. Registro Prestaci&oacute;n Servicio y Seguimiento - Fase II.&nbsp;<span style="color:#16a085"><strong>    {{ project.fecha_registro_servicio_seguimiento_fase_ii_anexo_20 }}</strong></span></li>                  
+                  <li>Anexo 21. Memoria Ejecuci&oacute;n Proyecto y Cuestionario.&nbsp;<span style="color:#16a085"><strong>{{ project.memoria_proyecto_y_cuestionario  }} </strong></span></li>
                   <li>Anexo 27. Formulario CCC - EMPRESAS..&nbsp;<span style="color:#16a085"><strong>{{ project.formulario_ccc_empresas }}  </strong></span></li>
                   <li>Facturas.&nbsp;<span style="color:#16a085"><strong>{{ project.facturas  }}</strong></span></li>
                   <li>Orden de transferencia.&nbsp;<span style="color:#16a085"><strong>{{ project.orden_de_transferencia  }} </strong></span></li>
