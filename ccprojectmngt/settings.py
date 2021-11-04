@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # Librerias
     'import_export',
+    # 'django_filters',
 
     # Apps
     'document.apps.DocumentConfig',

@@ -2,7 +2,10 @@
 from django.contrib import admin
 from django.urls import path
 
-from .views import HomeView, home_view
+from .views import (
+    HomeView
+    # ProjectListView
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -10,4 +13,5 @@ urlpatterns = [
     path('', HomeView.as_view(), name="home"),
     # path('', home_view, name="home")
     # path('<slug:cadenaid>/', HomeView.as_view(), name="home-slug"),
+    # path('project-list/', ProjectListView.as_view(), name="project_list"),
 ]

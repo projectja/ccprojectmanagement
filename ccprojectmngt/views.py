@@ -8,6 +8,9 @@ from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
+# from django_filters.views import FilterView
+# from document.filter import ProjectFilter
+
 from document.models import Project
 from document.utils import AcctionDocument as ad
 
@@ -60,8 +63,7 @@ class HomeView(TemplateView):
         # # con check y se almacenan en una lista.
         for key, value in request.POST.items():  # request.POST.items() => [(key, value), (key, value)....(keyN, ValueN)]
             if key != 'csrfmiddlewaretoken':
-                for pk in value:
-                    check_id_list.append(pk)
+                check_id_list.append(value)
         
         # TODO test: verificar contenido de check_id_list por consola
         # print(check_id_list)
@@ -121,48 +123,3 @@ class HomeView(TemplateView):
             return response
         except Exception as e:
             print(e)
-
-
-
-def home_view(request):
-
-    if request.method == 'POST':
-        check_id_list = list()
-        text_file_dict = dict()
-
-        for key, value in request.POST.items():
-            if key != 'csrfmiddlewaretoken':
-                for pk in value:
-                    check_id_list.append(pk)
-        
-        projects_selected = Project.objects.filter(pk__in=check_id_list)
-        html_generados = ad.generarHTML(projects_selected)
-        try:
-            response = HttpResponse(content_type="application/zip")
-            response['Content-Disposition'] = 'attachment; filename=test.zip'
-
-            zip_buffer = BytesIO()
-
-            for solicitante, html_code in html_generados.items():
-                buffer = BytesIO()
-                buffer.write(html_code.encode('UTF-8'))
-                buffer.seek(0)
-
-                text_file_dict[solicitante] = buffer
-            
-            with zipfile.ZipFile(zip_buffer, "a", zipfile.ZIP_DEFLATED, False) as zip_file:
-                for solicitante, txt_file_buffer in text_file_dict.items():
-                    file_name = "{}.txt".format(solicitante)
-                    zip_file.writestr(file_name, txt_file_buffer.getvalue())
-            
-            response.write(zip_buffer.getvalue())
-            return response
-        except Exception as e:
-            print(e)
-    else:
-        projects = Project.objects.all()
-
-        ctx = {
-            'projects': projects
-        }
-        return render(request, 'index.html', ctx)
